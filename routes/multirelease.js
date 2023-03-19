@@ -1,11 +1,11 @@
 /*
-    Rutas de  Release
-    host + /api/release
+    Rutas de  Multirelease
+    host + /api/Multirelease
 */
 const { Router } = require('express');
 const { check } = require('express-validator');
 const { validarCampos } = require('../middlewares/validarCampos');
-const {getRelease,createRelease, updateRelease, deleteRelease} = require('../controllers/release');
+const {getMultirelease,createMultirelease, updateMultirelease, deleteMultirelease} = require('../controllers/multirelease');
 const {validarJWT} = require('../middlewares/validarJWT');
 
 const router = Router();
@@ -21,22 +21,22 @@ router.get(
         // validarCampos,
         validarJWT
     ],
-    getRelease) ;
+    getMultirelease) ;
 
 router.post(
     '/new',
     [//mis didlewares
-        check('price', 'El precio es obligatorio').not().isEmpty(),
+        check('code', 'El codigo es obligatorio').not().isEmpty(),
         check('title', 'El titulo es obligatorio').not().isEmpty(),
         validarCampos , validarJWT
     ],
-    createRelease) ;
+    createMultirelease) ;
 
 
-router.put('/:id' , validarJWT,updateRelease) ;
+router.put('/:id' , validarJWT,updateMultirelease) ;
 
 
-router.delete('/:id' ,validarJWT ,deleteRelease) ;
+router.delete('/:id' ,validarJWT ,deleteMultirelease) ;
 
 
 

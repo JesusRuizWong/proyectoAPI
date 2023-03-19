@@ -23,7 +23,7 @@ app.use(express.json()) ;
 //Rutas
 // TODO: auth//crear. login, renew
 app.use('/api/auth', require ('./routes/auth')) ;
-app.use('/api/release', require ('./routes/release')) ;
+app.use('/api/multirelease', require ('./routes/multirelease')) ;
 app.use('/api/multitable', require ('./routes/multitable')) ;
 app.use('/api/multivalue', require ('./routes/multivalue')) ;
 
