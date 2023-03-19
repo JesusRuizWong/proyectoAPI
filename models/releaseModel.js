@@ -28,7 +28,7 @@ const ReleaseSchema = Schema({
         type: String
     },
 
-    userid:{
+    user:{
         type: Schema.Types.ObjectId,
         ref: 'UserModel'
 
