@@ -1,6 +1,6 @@
 /*
-    Rutas de  release
-    host + /api/release
+    Rutas de  Release
+    host + /api/Release
 */
 const { Router } = require('express');
 const { check } = require('express-validator');
@@ -19,24 +19,26 @@ router.get(
         // check('email', 'El email es obligatorio').isEmail(),
         // check('password', 'El password es obligatorio').not().isEmpty() ,
         // validarCampos,
+        validarJWT
     ],
     getRelease) ;
 
 router.post(
     '/new',
     [//mis didlewares
-        check('title', 'El título es obligatorio').not().isEmpty(),
-        check('notes', 'El detalle es obligatorio').not().isEmpty(),
-        check('price', 'El precio es obligatorio').not().isEmpty(),
+        check('code', 'El codigo es obligatorio').not().isEmpty(),
+        check('title', 'El titulo es obligatorio').not().isEmpty(),
         validarCampos , validarJWT
     ],
     createRelease) ;
 
 
-router.put('/:id' ,updateRelease) ;
+router.put('/:id' , validarJWT,updateRelease) ;
 
 
-router.put('/:id' ,deleteRelease) ;
+router.delete('/:id' ,validarJWT ,deleteRelease) ;
+
+
 
 
 

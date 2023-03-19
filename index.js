@@ -29,6 +29,6 @@ app.use('/api/multivalue', require ('./routes/multivalue')) ;
 
 // escuchar peticiones
 app.listen(process.env.PORT, () =>{
-    console.log(`servidor corriendi en puerto  ${process.env.PORT}`)
+    console.log(`servidor corriendo en puerto  ${process.env.PORT}`)
 });
 
