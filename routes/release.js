@@ -26,7 +26,7 @@ router.get(
 router.post(
     '/new',
     [//mis didlewares
-        check('code', 'El codigo es obligatorio').not().isEmpty(),
+        check('price', 'El precio es obligatorio').not().isEmpty(),
         check('title', 'El titulo es obligatorio').not().isEmpty(),
         validarCampos , validarJWT
     ],

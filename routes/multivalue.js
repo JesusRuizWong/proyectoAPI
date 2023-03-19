@@ -23,6 +23,17 @@ router.get(
     ],
     getMultivalue) ;
 
+    router.get(
+        '/tipoanuncio',
+        [//mis middlewares
+            // check('name', 'El Nombre es obligatorio').not().isEmpty(),
+            // check('email', 'El email es obligatorio').isEmail(),
+            // check('password', 'El password es obligatorio').not().isEmpty() ,
+            // validarCampos,
+            validarJWT
+        ],
+        getMultivalue) ;
+
 router.post(
     '/new',
     [//mis didlewares
