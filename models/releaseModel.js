@@ -28,6 +28,13 @@ const ReleaseSchema = Schema({
         type: String
     },
 
+    active:{
+        type: Boolean,
+        default: true,
+        required: true,
+
+    },
+
     user:{
         type: Schema.Types.ObjectId,
         ref: 'UserModel'

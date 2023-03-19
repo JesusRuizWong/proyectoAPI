@@ -7,7 +7,7 @@ const releaseModel= require('../models/releaseModel') ;
 const getRelease= async (req, res=response)=>{
 
     const release= await releaseModel.find()
-                                     .populate('user', 'name');
+                                     .populate('user', 'name')
 
     res.json({
         ok:true,
