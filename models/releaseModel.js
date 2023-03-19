@@ -30,7 +30,7 @@ const ReleaseSchema = Schema({
 
     userid:{
         type: Schema.Types.ObjectId,
-      //  ref: 'UserModel'
+        ref: 'UserModel'
 
     }
 }) ;

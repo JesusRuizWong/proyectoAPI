@@ -1,6 +1,6 @@
 /*
     Rutas de  Release
-    host + /api/Release
+    host + /api/release
 */
 const { Router } = require('express');
 const { check } = require('express-validator');
